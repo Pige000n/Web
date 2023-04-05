@@ -2,14 +2,11 @@
 title: 15-内置对象 String：字符串的常见方法
 ---
 
-<ArticleTopAd></ArticleTopAd>
-
-
+<!-- <ArticleTopAd></ArticleTopAd> -->
 
 ## 内置对象简介
 
 > JavaScript 中的对象分为3种：自定义对象、内置对象、浏览器对象。
-
 > 前面两种对象：是JS的基础内容，属于 ECMAScript； 第三个浏览器对象：属于JS独有，即 JS 内置的API。
 
 **内置对象**：就是指这个语言自带的一些对象，供开发者使用，这些对象提供了一些常用或者基本而必要的功能（属性和方法）。
@@ -18,21 +15,19 @@ title: 15-内置对象 String：字符串的常见方法
 
 **JavaScript的内置对象**：
 
-| 内置对象 | 对象说明 |
-|:-------------|:-------------|
-|  Arguments | 函数参数集合|
-|  Array | 数组|
-|  Boolean | 布尔对象|
-|  Math | 数学对象|
-|  Date | 日期时间|
-|  Error | 异常对象|
-|  Function | 函数构造器|
-|  Number | 数值对象|
-|  Object | 基础对象|
-|  RegExp | 正则表达式对象|
-|  String | 字符串对象|
-
-
+| 内置对象  | 对象说明       |
+| :-------- | :------------- |
+| Arguments | 函数参数集合   |
+| Array     | 数组           |
+| Boolean   | 布尔对象       |
+| Math      | 数学对象       |
+| Date      | 日期时间       |
+| Error     | 异常对象       |
+| Function  | 函数构造器     |
+| Number    | 数值对象       |
+| Object    | 基础对象       |
+| RegExp    | 正则表达式对象 |
+| String    | 字符串对象     |
 
 ## 字符串前言
 
@@ -48,7 +43,6 @@ title: 15-内置对象 String：字符串的常见方法
 
 > 这个方法，是使用频率最高的一个方法。
 
-
 **语法 1**：
 
 ```javascript
@@ -61,9 +55,9 @@ title: 15-内置对象 String：字符串的常见方法
 
 因此可以得出一个重要技巧：
 
--   **如果获取的索引值为 0，说明字符串是以查询的参数为开头的**。
+- **如果获取的索引值为 0，说明字符串是以查询的参数为开头的**。
 
--   如果获取的索引值为-1，说明这个字符串中没有指定的内容。
+- 如果获取的索引值为-1，说明这个字符串中没有指定的内容。
 
 举例 1：(查找单个字符)
 
@@ -136,9 +130,7 @@ while (index !== -1) {
 console.log('a 出现的次数是: ' + num);
 ```
 
-
 ### 2、search()：获取字符串中指定内容的索引（参数里一般是正则）
-
 
 **语法**：
 
@@ -152,7 +144,6 @@ console.log('a 出现的次数是: ' + num);
 
 **解释**：可以检索一个字符串中是否含有指定内容。如果字符串中含有该内容，则会返回其**第一次出现**的索引；如果没有找到指定的内容，则返回 -1。
 
-
 举例：
 
 ```js
@@ -163,7 +154,6 @@ console.log(name.search(/yi/i)); // 打印结果：6
 ```
 
 备注：上方的`/yi/i`采用的是正则表达式的写法，意思是，让 name去匹配字符`yi`，忽略大小写。我们在后面会专门介绍正则表达式。
-
 
 ### 3、includes()：字符串中是否包含指定的内容
 
@@ -185,7 +175,6 @@ console.log(name.includes('haha')); // 打印结果：false
 
 console.log(name.includes('yi',7)); // 打印结果：false
 ```
-
 
 ### 4、startsWith()：字符串是否以指定的内容开头
 
@@ -349,12 +338,9 @@ for (var i = 0; i < str.length; i++) {
 
 ## 字符串截取
 
-
 ### 1、slice()
 
-
 > slice() 方法用的最多。
-
 
 语法：
 
@@ -413,8 +399,6 @@ for (var i = 0; i < str.length; i++) {
 - `(-3)` 从倒数第几个开始，截取到最后。
 
 备注：ECMAscript 没有对 `substr()` 方法进行标准化，因此不建议使用它。
-
-
 
 ## String.fromCharCode()
 
@@ -494,10 +478,6 @@ console.log(str3.split('许')); // 同上
 
 ![](http://img.smyhvae.com/20200611_2050.png)
 
-
-
-
-
 ## replace()
 
 语法：
@@ -548,11 +528,6 @@ const mix_telephone = telephone.slice(0, -4) + '*'.repeat(4); // 模糊电话号
 console.log(telephone); // 打印结果：13088889999
 console.log(mix_telephone); // 打印结果：1308888****
 ```
-
-
-
-
-
 
 ## trim()
 
